@@ -14,7 +14,7 @@ class NewsPage {
     }
 
     async navigate() {
-        await this.page.goto(this.url);
+        await this.page.goto(this.url,{ timeout: 60000, waitUntil: 'load' });
     }
 
     async getNewsArticles() {
