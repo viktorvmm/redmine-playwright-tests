@@ -1,0 +1,91 @@
+Verification failed for selector "#content h2": ExpectError: Timed out 15000ms waiting for expect(locator).toContainText(expected)
+
+Locator: locator('#content h2').first()
+Expected string: "Download"
+Received string: "Latest releases¶"
+Call log:
+  - Expect "toContainText" with timeout 15000ms
+  - waiting for locator('#content h2').first()
+    19 × locator resolved to <h2>…</h2>
+       - unexpected value "Latest releases¶"
+
+    at HomePage.verifyPageContent (C:\Users\Viktor\redmine-tests\pages\HomePage.js:70:33)
+    at HomePage.goToDownload (C:\Users\Viktor\redmine-tests\pages\HomePage.js:89:16)
+    at C:\Users\Viktor\redmine-tests\tests\homepage.spec.js:46:9
+    at C:\Users\Viktor\redmine-tests\tests\homepage.spec.js:45:7 {
+  matcherResult: {
+    name: 'toContainText',
+    expected: 'Download',
+    message: '\x1B[31mTimed out 15000ms waiting for \x1B[39m\x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoContainText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+      '\n' +
+      "Locator: locator('#content h2').first()\n" +
+      'Expected string: \x1B[32m"Download"\x1B[39m\n' +
+      'Received string: \x1B[31m"Latest releases¶"\x1B[39m\n' +
+      'Call log:\n' +
+      '\x1B[2m  - Expect "toContainText" with timeout 15000ms\x1B[22m\n' +
+      "\x1B[2m  - waiting for locator('#content h2').first()\x1B[22m\n" +
+      '\x1B[2m    19 × locator resolved to <h2>…</h2>\x1B[22m\n' +
+      '\x1B[2m       - unexpected value "Latest releases¶"\x1B[22m\n',
+    pass: false,
+    actual: 'Latest releases¶',
+    log: [
+      '  - Expect "toContainText" with timeout 15000ms',
+      "  - waiting for locator('#content h2').first()",
+      '    19 × locator resolved to <h2>…</h2>',
+      '       - unexpected value "Latest releases¶"'
+    ],
+    timeout: 15000
+  },
+  [Symbol(step)]: {
+    stepId: 'expect@24',
+    category: 'expect',
+    apiName: 'expect.toContainText',
+    title: 'toContainText',
+    params: { expected: 'Download' },
+    infectParentStepsWithError: undefined,
+    boxedStack: undefined,
+    location: {
+      file: 'C:\\Users\\Viktor\\redmine-tests\\pages\\HomePage.js',
+      line: 70,
+      column: 33,
+      function: 'HomePage.verifyPageContent'
+    },
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'expect@24'
+    },
+    complete: [Function: complete],
+    endWallTime: 1749741711351,
+    error: {
+      message: 'Error: \x1B[31mTimed out 15000ms waiting for \x1B[39m\x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoContainText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        "Locator: locator('#content h2').first()\n" +
+        'Expected string: \x1B[32m"Download"\x1B[39m\n' +
+        'Received string: \x1B[31m"Latest releases¶"\x1B[39m\n' +
+        'Call log:\n' +
+        '\x1B[2m  - Expect "toContainText" with timeout 15000ms\x1B[22m\n' +
+        "\x1B[2m  - waiting for locator('#content h2').first()\x1B[22m\n" +
+        '\x1B[2m    19 × locator resolved to <h2>…</h2>\x1B[22m\n' +
+        '\x1B[2m       - unexpected value "Latest releases¶"\x1B[22m\n',
+      stack: 'Error: \x1B[31mTimed out 15000ms waiting for \x1B[39m\x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoContainText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        "Locator: locator('#content h2').first()\n" +
+        'Expected string: \x1B[32m"Download"\x1B[39m\n' +
+        'Received string: \x1B[31m"Latest releases¶"\x1B[39m\n' +
+        'Call log:\n' +
+        '\x1B[2m  - Expect "toContainText" with timeout 15000ms\x1B[22m\n' +
+        "\x1B[2m  - waiting for locator('#content h2').first()\x1B[22m\n" +
+        '\x1B[2m    19 × locator resolved to <h2>…</h2>\x1B[22m\n' +
+        '\x1B[2m       - unexpected value "Latest releases¶"\x1B[22m\n' +
+        '\n' +
+        '    at HomePage.verifyPageContent (C:\\Users\\Viktor\\redmine-tests\\pages\\HomePage.js:70:33)\n' +
+        '    at HomePage.goToDownload (C:\\Users\\Viktor\\redmine-tests\\pages\\HomePage.js:89:16)\n' +
+        '    at C:\\Users\\Viktor\\redmine-tests\\tests\\homepage.spec.js:46:9\n' +
+        '    at C:\\Users\\Viktor\\redmine-tests\\tests\\homepage.spec.js:45:7',
+      cause: undefined
+    }
+  }
+}
