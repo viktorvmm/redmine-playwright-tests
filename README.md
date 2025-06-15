@@ -4,6 +4,8 @@
 Це тестовий проект для стажування, спрямований на автоматизацію функціонального тестування веб-додатку Redmine за допомогою Playwright. Мета — освоїти написання автотестів, роботу з CI/CD (GitHub Actions) і генерацію звітів (Allure).
 
 ---
+- **Тест План та Тест Кейси:**  
+  [Google Spreadsheet з тест планом і тест кейсами](https://docs.google.com/spreadsheets/d/1PQKovxJqrpASrlVtSQzp3eT4QfSpCO0l1XvSuhWfuJs/edit?usp=sharing)
 
 ## Хронологія роботи (5 днів)
 
