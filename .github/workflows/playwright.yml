@@ -25,7 +25,7 @@ jobs:
         run: npx playwright test --reporter=allure-playwright
 
       - name: Upload Allure Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download Allure Results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: allure-results
           path: allure-results
