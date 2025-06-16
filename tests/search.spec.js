@@ -1,9 +1,8 @@
-const { test, expect } = require('@playwright/test');
-const { SearchPage } = require('../pages/SearchPage');
+const { expect } = require('@playwright/test');
+const { test } = require('../fixtures/pages');
 
 test.describe('Redmine Search Functionality Tests', () => {
-  test('Verify Search Functionality', async ({ page }) => {
-    const searchPage = new SearchPage(page);
+  test('Verify Search Functionality', async ({ searchPage }) => {
     await searchPage.gotoHome();
     await searchPage.verifySearchInputVisible();
     await searchPage.performSearch();

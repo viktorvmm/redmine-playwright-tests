@@ -3,7 +3,6 @@ class NewsPage {
         this.page = page;
         this.url = 'https://www.redmine.org/projects/redmine/news';
         
-      
         this.newsArticles = '.news-article';
         this.newsTitle = 'h2:has-text("Новини")';
         this.newsArticleTitle = '.news-article h3 a';
@@ -46,4 +45,4 @@ class NewsPage {
     }
 }
 
-module.exports = NewsPage; 
+module.exports = { NewsPage }; 

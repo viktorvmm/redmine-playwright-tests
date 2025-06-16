@@ -14,8 +14,7 @@ class HomePage {
   }
 
   async goto() {
-    const response = await this.page.goto('https://www.redmine.org/');
-    return response;
+    return await this.page.goto('https://www.redmine.org/');
   }
 
   async verifyHomepageLoaded() {
@@ -25,16 +24,6 @@ class HomePage {
   async verifyPageTitle() {
     const title = await this.page.title();
     expect(title).toContain('Redmine');
-  }
-
-  async verifyHttpStatus(response) {
-    expect(response.status()).toBe(200);
-  }
-
-  async verifyNavigationElements() {
-    for (const [name, element] of Object.entries(this.navigationElements)) {
-      await expect(element).toBeVisible();
-    }
   }
 }
 

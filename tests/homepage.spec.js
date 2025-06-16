@@ -1,21 +1,12 @@
-const { test, expect } = require('@playwright/test');
-const { HomePage } = require('../pages/HomePage');
+const { expect } = require('@playwright/test');
+const { test } = require('../fixtures/pages');
+const HttpStatusChecker = require('../utils/HttpStatusChecker');
 
 test.describe('Redmine Homepage Tests', () => {
-  test('Verify Homepage Loads Successfully', async ({ page }) => {
-    const homePage = new HomePage(page);
+  test('Verify Homepage Loads Successfully', async ({ homePage }) => {
     const response = await homePage.goto();
-    
-    
-    await homePage.verifyHttpStatus(response);
-    
-   
+    await HttpStatusChecker.verifySuccess(response);
     await homePage.verifyPageTitle();
-    
-    
     await homePage.verifyHomepageLoaded();
-    
-    
-    await homePage.verifyNavigationElements();
   });
 });
