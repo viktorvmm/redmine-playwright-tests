@@ -1,63 +1,63 @@
-# QA Автоматизація тестування Redmine з Playwright
+# QA Test Automation of Redmine using Playwright
 
-## Опис проекту  
-Це тестовий проект для стажування, спрямований на автоматизацію функціонального тестування веб-додатку Redmine за допомогою Playwright. Мета — освоїти написання автотестів, роботу з CI/CD (GitHub Actions) і генерацію звітів (Allure).
-
----
-- **Тест План та Тест Кейси:**  
-  [Google Spreadsheet з тест планом і тест кейсами](https://docs.google.com/spreadsheets/d/1PQKovxJqrpASrlVtSQzp3eT4QfSpCO0l1XvSuhWfuJs/edit?usp=sharing)
-
-## Хронологія роботи (5 днів)
-
-### День 1 — Ознайомлення  
-- Вивчив завдання, цілі і структуру веб-додатку Redmine (https://www.redmine.org/)
-- Проаналізував основні функції, які потрібно тестувати  
-
-### День 2 — Планування тестування  
-- Написав тест-план із чітким описом цілей тестування та охопленням основних функцій  
-- Розробив тест-кейси, включно з позитивними та базовими негативними сценаріями  
-
-### День 3 — Підготовка середовища і перший тест  
-- Налаштував локальне середовище: VS Code, Node.js, Playwright  
-- Написав перший автотест для базового сценарію (завантаження головної сторінки)  
-
-### День 4 — Автоматизація тестів  
-- Реалізував автотести для усіх основних тест-кейсів  
-- Запустив тести локально у браузері Chromium  
-- Налаштував GitHub Actions для автоматичного запуску тестів при пуші в репозиторій  
-- Підключив генерацію Allure-звітів для зручного аналізу результатів  
-
-### День 5 — Усунення проблем і завершення  
-- Виникли проблеми із запуском тестів у браузері Edge після оновлення Windows і бібліотек  
-- З’ясував, що при встановленні Node.js важливо включати додаткові пакети для компіляції (C++ Build Tools і Python)  
-- Видалив всі npm-модулі та перевстановив залежності  
-- Переналаштував середовище і налаштував драйвери  
-- Завершив роботу над тестами та конфігурацією CI/CD  
-- Підготував документацію та звіти  
+## Project Description  
+This is a training project focused on automating functional testing of the Redmine web application using Playwright. The goal is to practice writing automated tests, working with CI/CD (GitHub Actions), and generating reports (Allure).
 
 ---
+- **Test Plan and Test Cases:**  
+  [Google Spreadsheet with Test Plan and Test Cases](https://docs.google.com/spreadsheets/d/1PQKovxJqrpASrlVtSQzp3eT4QfSpCO0l1XvSuhWfuJs/edit?usp=sharing)
 
-## Використані інструменти та технології  
-- **VS Code** — редактор коду  
-- **Node.js** — платформа для запуску JavaScript  
-- **Playwright** — бібліотека для автоматизації браузерів  
-- **GitHub Actions** — CI/CD для автоматичного запуску тестів  
-- **Allure** — генерація детальних звітів про тести  
-- **Курсор** — додаток для роботи з текстом  
+## Timeline (5 Days)
+
+### Day 1 — Introduction  
+- Reviewed the task, objectives, and the structure of the Redmine web application (https://www.redmine.org/)  
+- Analyzed the main features to be tested  
+
+### Day 2 — Test Planning  
+- Created a detailed test plan, including testing objectives and coverage of the main functionalities  
+- Developed test cases, including positive and basic negative scenarios  
+
+### Day 3 — Environment Setup and First Test  
+- Set up the local environment: VS Code, Node.js, Playwright  
+- Wrote the first automated test for a basic scenario (loading the homepage)  
+
+### Day 4 — Test Automation  
+- Automated tests for all main test cases  
+- Ran tests locally in the Chromium browser  
+- Configured GitHub Actions for automatic test runs on repository push  
+- Integrated Allure reporting for convenient result analysis  
+
+### Day 5 — Troubleshooting and Finalization  
+- Encountered issues running tests in the Edge browser after Windows and library updates  
+- Discovered the importance of including additional build packages (C++ Build Tools and Python) when installing Node.js  
+- Removed all npm modules and reinstalled dependencies  
+- Reconfigured the environment and browser drivers  
+- Finalized test scripts and CI/CD configuration  
+- Prepared documentation and reports  
 
 ---
 
-## Опис тестування  
-- Тестував основні функції веб-додатку Redmine (реєстрація, логін, пошук, навігація, завантаження файлів)  
-- Написав позитивні і базові негативні сценарії  
-- Структурував тести по модулях із застосуванням Page Object Model (POM)  
+## Tools and Technologies Used  
+- **VS Code** — code editor  
+- **Node.js** — JavaScript runtime  
+- **Playwright** — browser automation library  
+- **GitHub Actions** — CI/CD for automated test execution  
+- **Allure** — detailed test reporting tool  
+- **Cursor** — application for working with text  
 
 ---
 
-## Висновки  
-- Навчився налаштовувати середовище для Playwright, включно з запуском тестів локально і в CI  
-- Познайомився з генерацією Allure-звітів і публікацією результатів  
-- Дізнався про важливість додаткових системних пакетів для Node.js в Windows  
-- Вперше використав курсор — покращило ефективність роботи з кодом  
+## Test Description  
+- Tested core Redmine web application functionalities (registration, login, search, navigation, file uploads)  
+- Wrote positive and basic negative scenarios  
+- Structured tests by modules using the Page Object Model (POM)  
+
+---
+
+## Conclusions  
+- Learned how to configure the Playwright environment, including running tests both locally and in CI  
+- Gained experience with Allure report generation and result publishing  
+- Discovered the importance of additional system packages for Node.js on Windows  
+- Used Cursor for the first time — improved coding efficiency  
 
 ---
