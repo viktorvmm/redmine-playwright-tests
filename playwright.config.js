@@ -15,8 +15,5 @@ module.exports = {
     baseURL: 'https://www.redmine.org/',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    navigationTimeout: 60000,
-    actionTimeout: 30000,
   },
-  timeout: 60000,
 };

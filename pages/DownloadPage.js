@@ -40,4 +40,4 @@ class DownloadPage {
   }
 }
 
-module.exports = DownloadPage;
+module.exports = { DownloadPage };

@@ -5,7 +5,7 @@ class NewsPage {
         
       
         this.newsArticles = '.news-article';
-        this.newsTitle = 'h2:has-text("News"):not(:has-text("Add news"))';
+        this.newsTitle = 'h2:has-text("Новини")';
         this.newsArticleTitle = '.news-article h3 a';
         this.newsArticleAuthor = '.news-article .author';
         this.newsArticleContent = '.news-article .wiki';
@@ -14,8 +14,7 @@ class NewsPage {
     }
 
     async navigate() {
-        await this.page.goto(this.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
-        await this.page.waitForSelector(this.newsTitle, { state: 'visible', timeout: 30000 });
+        await this.page.goto(this.url,{ timeout: 60000, waitUntil: 'load' });
     }
 
     async getNewsArticles() {
@@ -47,4 +46,4 @@ class NewsPage {
     }
 }
 
-module.exports = { NewsPage }; 
+module.exports = NewsPage; 
