@@ -20,7 +20,7 @@ class LoginPage {
     await this.page.fill(this.usernameInput, username);
     await this.page.fill(this.passwordInput, password);
     await this.page.click(this.loginButton);
-    // Wait for either success or error state
+    
     await Promise.race([
       this.page.waitForSelector(this.loggedInUser, { state: 'visible' }),
       this.page.waitForSelector(this.errorMessage, { state: 'visible' })

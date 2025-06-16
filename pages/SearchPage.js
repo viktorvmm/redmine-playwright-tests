@@ -18,11 +18,11 @@ class SearchPage {
     const randomQuery = `test${Math.floor(Math.random() * 1000)}`;
     await this.searchInput.fill(randomQuery);
     await this.searchInput.press('Enter');
-    // Перевіряємо URL із усіма параметрами, включаючи q=<randomQuery>
+    
     await expect(this.page).toHaveURL(
       new RegExp(`https://www.redmine.org/projects/redmine/search\\?utf8=%E2%9C%93&scope=subprojects&wiki_pages=1&q=${randomQuery}`)
     );
-    // Базова перевірка, що сторінка результатів завантажилася
+    
     await expect(this.page.locator('body')).toBeVisible();
   }
 }

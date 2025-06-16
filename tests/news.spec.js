@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const NewsPage = require('../pages/NewsPage');
+const { NewsPage } = require('../pages/NewsPage');
 
 test.describe('Redmine News Page Tests', () => {
     let newsPage;

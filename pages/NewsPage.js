@@ -3,9 +3,9 @@ class NewsPage {
         this.page = page;
         this.url = 'https://www.redmine.org/projects/redmine/news';
         
-        // Selectors
+      
         this.newsArticles = '.news-article';
-        this.newsTitle = 'h2:has-text("Новини")';
+        this.newsTitle = 'h2:has-text("News"):not(:has-text("Add news"))';
         this.newsArticleTitle = '.news-article h3 a';
         this.newsArticleAuthor = '.news-article .author';
         this.newsArticleContent = '.news-article .wiki';
@@ -14,7 +14,8 @@ class NewsPage {
     }
 
     async navigate() {
-        await this.page.goto(this.url,{ timeout: 60000, waitUntil: 'load' });
+        await this.page.goto(this.url, { timeout: 60000, waitUntil: 'domcontentloaded' });
+        await this.page.waitForSelector(this.newsTitle, { state: 'visible', timeout: 30000 });
     }
 
     async getNewsArticles() {
@@ -46,4 +47,4 @@ class NewsPage {
     }
 }
 
-module.exports = NewsPage; 
+module.exports = { NewsPage }; 

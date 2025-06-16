@@ -7,7 +7,7 @@ test.describe('Redmine Login Tests', () => {
     await loginPage.gotoHome();
     await loginPage.navigateToLoginPage();
     
-    // Verify login form elements are present
+    
     await expect(page.locator('#username')).toBeVisible();
     await expect(page.locator('#password')).toBeVisible();
     await expect(page.locator('input[type="submit"]')).toBeVisible();
@@ -19,7 +19,7 @@ test.describe('Redmine Login Tests', () => {
     await loginPage.navigateToLoginPage();
     await loginPage.login('invalid_user', 'invalid_password');
     
-    // Wait for error message and verify
+    
     await page.waitForSelector('#flash_error', { state: 'visible' });
     const errorMessage = await loginPage.getErrorMessage();
     expect(errorMessage).toContain('Invalid user or password');
@@ -30,10 +30,10 @@ test.describe('Redmine Login Tests', () => {
     await loginPage.gotoHome();
     await loginPage.navigateToLoginPage();
     
-    // Try to submit without credentials
+    
     await page.click('input[type="submit"]');
     
-    // Wait for error message and verify
+    
     await page.waitForSelector('#flash_error', { state: 'visible' });
     const errorMessage = await loginPage.getErrorMessage();
     expect(errorMessage).toContain('Invalid user or password');
